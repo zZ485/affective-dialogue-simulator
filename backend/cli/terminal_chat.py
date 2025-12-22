@@ -1,6 +1,13 @@
 """
 终端对话界面 - MVP 实现
 """
+import sys
+from pathlib import Path
+
+# 动态添加 backend 目录到 Python 路径
+backend_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(backend_dir))
+
 import asyncio
 import sys
 from app.services.dialogue_manager import dialogue_manager
